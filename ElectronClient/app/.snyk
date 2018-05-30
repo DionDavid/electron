@@ -6,4 +6,12 @@ ignore:
     - shelljs:
         reason: Not vulnerable
         expires: '2018-06-29T11:52:23.807Z'
-patch: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  'npm:minimatch:20160620':
+    - gulp > vinyl-fs > glob-stream > minimatch:
+        patched: '2018-05-30T14:02:37.280Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > minimatch:
+        patched: '2018-05-30T14:02:37.280Z'
+    - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
+        patched: '2018-05-30T14:02:37.280Z'
