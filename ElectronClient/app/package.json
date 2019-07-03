@@ -5,7 +5,9 @@
   "main": "main.js",
   "scripts": {
     "build": "gulp build",
-    "test": "snyk test"
+    "test": "snyk test",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "paths": {
     "config": "config/servoy.json"
@@ -24,11 +26,11 @@
     "pupa": "^1.0.0",
     "resolv": "^1.0.0",
     "uglify-js": "^3.3.28",
-    "unused-filename": "^1.0.0"
+    "unused-filename": "^1.0.0",
+    "snyk": "^1.189.0"
   },
   "devDependencies": {
-    "node-gyp": "^3.6.2",
-    "snyk": "^1.82.0"
+    "node-gyp": "^3.6.2"
   },
   "repository": {
     "type": "git",
@@ -38,5 +40,6 @@
     "desktop",
     "electron"
   ],
-  "author": "Dion Haneveld"
+  "author": "Dion Haneveld",
+  "snyk": true
 }
